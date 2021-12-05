@@ -23,6 +23,7 @@
             motion:layout_constraintBottom_toBottomOf="parent"
             android:id="@+id/gif_epam"
             motion:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible"
             android:layout_marginTop="250dp" />
         <Constraint
             android:layout_width="match_parent"
@@ -172,6 +173,14 @@
             android:visibility="invisible"
             android:layout_marginEnd="0dp"
             android:layout_marginTop="50dp" />
+        <Constraint
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/gif_epam"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"
+            android:layout_marginTop="250dp" />
 
 
     </ConstraintSet>

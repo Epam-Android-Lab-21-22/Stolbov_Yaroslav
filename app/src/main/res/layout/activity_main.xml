@@ -13,6 +13,7 @@
         android:id="@+id/gif_epam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:elevation="@dimen/elevation_res"
         android:src="@drawable/epam_new_colors"
         app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
         app:layout_constraintEnd_toEndOf="@id/myRectangleView"
