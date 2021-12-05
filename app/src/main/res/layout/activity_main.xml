@@ -1,18 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Hello World!"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_epam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/epam_new_colors"
+        app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
+        app:layout_constraintEnd_toEndOf="@id/myRectangleView"
+        app:layout_constraintStart_toStartOf="@id/myRectangleView"
+        app:layout_constraintTop_toTopOf="@id/myRectangleView" />
+
+    <TextView
+        android:id="@+id/text_view_button_clicks"
+        android:elevation="@dimen/elevation_res"
+        android:layout_width="@dimen/text_view_width"
+        android:layout_height="@dimen/text_view_height"
+        android:background="@drawable/background_text_counters"
+        android:gravity="center"
+        android:text="@string/text_wish_count"
+        app:layout_constraintEnd_toStartOf="@id/small_snowman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/small_snowman"
+        android:elevation="@dimen/elevation_res"
+        android:layout_width="@dimen/small_image_width"
+        android:layout_height="@dimen/small_image_height"
+        android:contentDescription="@string/small_snowman"
+        android:src="@drawable/small_snowman"
+        app:layout_constraintEnd_toStartOf="@id/text_view_symbols_count"
+        app:layout_constraintStart_toEndOf="@id/text_view_button_clicks"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_symbols_count"
+        android:elevation="@dimen/elevation_res"
+        android:layout_width="@dimen/text_view_width"
+        android:layout_height="@dimen/text_view_height"
+        android:background="@drawable/background_text_counters"
+        android:gravity="center"
+        android:text="@string/text_count_symbols"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/small_snowman"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/myRectangleView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rectangle_height"
+        android:background="@drawable/background_main"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/dialog"
+        android:layout_width="@dimen/snowman_textview_width"
+        android:layout_height="@dimen/snowman_textview_height"
+        android:background="@drawable/background_circle_dialog"
+
+        android:gravity="center"
+        android:text="@string/dialog_text"
+        android:visibility="invisible"
+        android:elevation="@dimen/elevation_res"
+        app:layout_constraintEnd_toEndOf="@id/myRectangleView"
+        app:layout_constraintStart_toStartOf="@id/myRectangleView"
+        app:layout_constraintTop_toTopOf="@id/myRectangleView">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/snow_man"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/snowman"
+        android:src="@drawable/snowman"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_snow1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gif_snow_height"
+        android:src="@drawable/snow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_snow2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gif_snow_height"
+        android:src="@drawable/snow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_wish"
+        android:inputType="text"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/myRectangleView"
+        app:layout_constraintEnd_toEndOf="@id/myRectangleView"
+        app:layout_constraintStart_toStartOf="@id/myRectangleView" />
+
+    <Button
+        android:id="@+id/button_wish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_wish"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/edit_text"
+        app:layout_constraintTop_toBottomOf="@id/edit_text" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

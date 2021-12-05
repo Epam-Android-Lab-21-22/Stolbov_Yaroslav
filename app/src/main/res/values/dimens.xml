@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="elevation_res">4dp</dimen>
+    <dimen name="text_view_width">130dp</dimen>
+    <dimen name="text_view_height">100dp</dimen>
+    <dimen name="small_image_width">80dp</dimen>
+    <dimen name="small_image_height">100dp</dimen>
+    <dimen name="rectangle_height">500dp</dimen>
+    <dimen name="snowman_textview_width">300dp</dimen>
+    <dimen name="snowman_textview_height">100dp</dimen>
+    <dimen name="gif_snow_height">250dp</dimen>
+    <dimen name="edit_text_width">300dp</dimen>
+</resources>

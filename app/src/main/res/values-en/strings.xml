@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Not just UI</string>
+    <string name="snowman">Snowman</string>
+    <string name="button_wish">OK</string>
+    <string name="edit_wish">Make a wish</string>
+    <string name="dialog_text">Hey! The new year is coming, which means it\'s time to make a wish. You can think as much as you like. Be sure they will all come true :)</string>
+    <string name="small_snowman">Small snowman</string>
+    <string name="text_wish_count">The number of wishes you sent: </string>
+    <string name="text_count_symbols">The number of characters in the wish at the moment: </string>
+</resources>

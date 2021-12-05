@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/myRectangleView"
+               motion:framePosition="100"
+               android:alpha="0.5" />
+       </KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragDown" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/gif_epam"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="250dp" />
+        <Constraint
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/gif_snow1"
+            android:layout_marginBottom="250dp"
+            motion:layout_constraintTop_toTopOf="@+id/myRectangleView"
+            android:layout_marginTop="0dp" />
+        <Constraint
+            android:layout_height="250dp"
+            motion:layout_constraintTop_toTopOf="@+id/myRectangleView"
+            motion:layout_constraintBottom_toBottomOf="@+id/myRectangleView"
+            android:layout_width="match_parent"
+            android:id="@+id/gif_snow2"
+            android:layout_marginTop="250dp"
+            android:layout_marginBottom="0dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@id/myRectangleView"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toTopOf="@id/myRectangleView"
+            motion:layout_constraintStart_toStartOf="@id/myRectangleView"
+            android:id="@+id/dialog"
+            android:layout_marginTop="30dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@id/myRectangleView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/myRectangleView"
+            motion:layout_constraintStart_toStartOf="@id/myRectangleView"
+            android:id="@+id/edit_text"
+            android:visibility="invisible"
+            android:layout_marginBottom="100dp" />
+        <Constraint
+            motion:layout_constraintStart_toEndOf="@id/text_view_button_clicks"
+            motion:layout_constraintEnd_toStartOf="@id/text_view_symbols_count"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/small_snowman"
+            android:visibility="visible"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="50dp" />
+        <Constraint
+            motion:layout_constraintEnd_toStartOf="@id/small_snowman"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/text_view_button_clicks"
+            android:visibility="visible"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="0dp" />
+        <Constraint
+            motion:layout_constraintStart_toEndOf="@+id/small_snowman"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/text_view_symbols_count"
+            android:visibility="visible"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="0dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/myRectangleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+
+        <Constraint
+            android:id="@+id/snow_man"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible" />
+
+        <Constraint
+            android:id="@+id/gif_snow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="@+id/myRectangleView"
+            android:layout_marginTop="300dp" />
+
+        <Constraint
+            android:id="@+id/gif_snow2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="300dp" />
+        <Constraint
+            android:id="@+id/dialog"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:visibility="visible"
+            motion:layout_constraintStart_toStartOf="@id/myRectangleView"
+            motion:layout_constraintTop_toTopOf="@id/myRectangleView"
+            motion:layout_constraintEnd_toEndOf="@id/myRectangleView"
+            android:layout_marginTop="30dp" />
+        <Constraint
+            android:id="@+id/edit_text"
+            motion:layout_constraintEnd_toEndOf="@id/myRectangleView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@id/myRectangleView"
+            android:visibility="visible"
+            motion:layout_constraintStart_toStartOf="@id/myRectangleView"
+            android:layout_marginBottom="100dp" />
+        <Constraint
+            android:id="@+id/button_wish"
+            motion:layout_constraintEnd_toEndOf="@id/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@id/edit_text" />
+        <Constraint
+            android:id="@+id/text_view_button_clicks"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@id/small_snowman"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp" />
+        <Constraint
+            android:id="@+id/text_view_symbols_count"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/small_snowman"
+            android:layout_marginTop="10dp" />
+        <Constraint
+            motion:layout_constraintStart_toEndOf="@id/text_view_button_clicks"
+            motion:layout_constraintEnd_toStartOf="@id/text_view_symbols_count"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/small_snowman"
+            android:visibility="invisible"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="50dp" />
+
+
+    </ConstraintSet>
+</MotionScene>
