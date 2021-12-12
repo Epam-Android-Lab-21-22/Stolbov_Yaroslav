@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">EmptyProjectStolbov</string>
+    <string name="app_name">Super App Navigation</string>
+    <string name="button_main_text">Ну же, жми!!!</string>
+    <string name="snackbar_text">Эй, верни интернет-соединение!</string>
+    <string name="button_open_cam">Открыть камеру</string>
+    <string name="button_open_cam_text">Открыть камеру</string>
+    <string name="camera_permission_text">Разрешение камеры</string>
+    <string name="ok">Ок</string>
+    <string name="permission_message">Разрешение необходимо для работы данной функции</string>
+    <string name="reject_text">Разрешение отклонено</string>
+    <string name="change_mind_text">Я передумал</string>
 </resources>
