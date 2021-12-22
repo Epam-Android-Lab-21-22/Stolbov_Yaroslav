@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">EmptyProjectStolbov</string>
+    <string name="app_name">Fragments app</string>
+    <string name="text_label_1">Red</string>
+    <string name="text_label_2">Green</string>
+    <string name="text_label_3">Blue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_red">RED</string>
+    <string name="title_blue">BLUE</string>
+    <string name="title_green">GREEN</string>
+
 </resources>
