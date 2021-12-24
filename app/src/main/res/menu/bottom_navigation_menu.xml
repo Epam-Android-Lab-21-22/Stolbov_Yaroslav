@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_red"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:orderInCategory="1"
+        android:title="@string/text_label_1" />
+    <item
+        android:id="@+id/page_green"
+        android:enabled="true"
+        android:orderInCategory="2"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:title="@string/text_label_2" />
+    <item
+        android:id="@+id/page_blue"
+        android:enabled="true"
+        android:orderInCategory="3"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:title="@string/text_label_3" />
+</menu>
