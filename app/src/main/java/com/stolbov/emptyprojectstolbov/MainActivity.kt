@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(), INewFragment {
             initStack(ParamBackStack.RED)
             initStack(ParamBackStack.BLUE)
             initStack(ParamBackStack.GREEN)
-            mainBinding.bottomNavigation.selectedItemId = R.id.item1
+            initStartFragment()
         } else {
             currentBackStack =
                 getStack(mainBinding.bottomNavigation.selectedItemId) ?: ParamBackStack.RED
@@ -47,6 +47,17 @@ class MainActivity : AppCompatActivity(), INewFragment {
         }
     }
 
+    private fun initStartFragment() {
+        mainBinding.bottomNavigation.selectedItemId = R.id.page_red
+        newFragment(
+            ColorsFragment.data(
+                counter = 0,
+                color = ContextCompat.getColor(this, ParamBackStack.RED.color)
+            ), stack = ParamBackStack.RED
+        )
+        mainBinding.toolbarText.text = getString(ParamBackStack.RED.title)
+    }
+
     override fun newFragment(args: Bundle, stack: ParamBackStack?) {
         val stackName =
             stack?.nameStack ?: getStack(mainBinding.bottomNavigation.selectedItemId)?.nameStack
@@ -58,9 +69,9 @@ class MainActivity : AppCompatActivity(), INewFragment {
     }
 
     private fun getStack(@IdRes itemId: Int) = when (itemId) {
-        R.id.item1 -> ParamBackStack.RED
-        R.id.item2 -> ParamBackStack.BLUE
-        R.id.item3 -> ParamBackStack.GREEN
+        R.id.page_red -> ParamBackStack.RED
+        R.id.page_blue -> ParamBackStack.BLUE
+        R.id.page_green -> ParamBackStack.GREEN
         else -> null
     }
 
@@ -75,7 +86,7 @@ class MainActivity : AppCompatActivity(), INewFragment {
     }
 
     override fun onBackPressed() {
-        if (supportFragmentManager.backStackEntryCount == 0) finish()
+        if (supportFragmentManager.backStackEntryCount == 1) finish()
         else supportFragmentManager.popBackStack()
     }
 }
