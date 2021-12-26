@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">EmptyProjectStolbov</string>
+    <string name="app_name">RecyclerView app</string>
+    <string name="trash_text">Это просто мусор, удали его</string>
+    <string name="delete_button_text">Delete button</string>
+    <string name="interface_element_text">Это элемент интерфейса, его не трогай</string>
+    <string name="content_string">Это контент, его тоже мы удалять не будем!</string>
+    <string name="id_text">ID:</string>
+    <string name="toolbar_main_text">Linear recyclerview</string>
+    <string name="button_grid_recyclerview">Button grid recyclerview</string>
+    <string name="button_linear_recyclerview">button linear recyclerview</string>
+    <string name="toolbar_second_text">Grid recyclerview</string>
+    <string name="fab_content_desc">add_cat_button</string>
 </resources>
