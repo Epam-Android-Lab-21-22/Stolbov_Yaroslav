@@ -1,4 +1,4 @@
-package com.stolbov.emptyprojectstolbov.data
+package com.stolbov.emptyprojectstolbov.firstScreen.model
 
 sealed class MyItem{
 

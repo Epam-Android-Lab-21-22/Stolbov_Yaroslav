@@ -1,9 +1,9 @@
-package com.stolbov.emptyprojectstolbov.adapter
+package com.stolbov.emptyprojectstolbov.secondScreen.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.stolbov.emptyprojectstolbov.ItemsViewModel
+import com.stolbov.emptyprojectstolbov.data.ItemsViewModel
 import com.stolbov.emptyprojectstolbov.databinding.TableItemBinding
 
 class SecondAdapter(private val itemsViewModel: ItemsViewModel): RecyclerView.Adapter<SecondAdapter.SecondViewHolder>() {
@@ -28,14 +28,6 @@ class SecondAdapter(private val itemsViewModel: ItemsViewModel): RecyclerView.Ad
 
     override fun getItemCount(): Int {
         return cats
-    }
-
-
-
-    fun addItemCat(){
-        itemsViewModel.countCatsSecondActivity++
-        cats++
-        notifyItemInserted(cats + 1)
     }
 
 }
