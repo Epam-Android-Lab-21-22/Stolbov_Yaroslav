@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="300dp"
+    android:minHeight="600dp"
+    android:background="@color/grey_main"
+    tools:context=".ui.main.songdialog.SongFragment">
+
+    <ImageView
+        android:id="@+id/songImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/cover_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/songGenre"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/songImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/songYear"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/songImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/songText"
+        android:layout_width="290dp"
+        android:textColor="@color/white"
+        android:layout_height="300dp"
+        android:scrollbars="vertical"
+        android:background="@drawable/text_border"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="3dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/songTittle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/text_border"
+        android:paddingHorizontal="5dp"
+        android:gravity="center_vertical"
+        android:minWidth="300dp"
+        android:textColor="@color/white"
+        app:drawableStartCompat="@drawable/track_icon"
+        app:layout_constraintBottom_toTopOf="@+id/songPerformer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songImage" />
+
+    <TextView
+        android:id="@+id/songPerformer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingHorizontal="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/text_border"
+        android:gravity="center_vertical"
+        android:minWidth="300dp"
+        android:textColor="@color/white"
+        app:drawableStartCompat="@drawable/performer_icon"
+        app:layout_constraintBottom_toTopOf="@+id/songAlbum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songTittle" />
+
+    <TextView
+        android:id="@+id/songAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingHorizontal="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/text_border"
+        android:gravity="center_vertical"
+        android:minWidth="300dp"
+        android:textColor="@color/white"
+        app:drawableStartCompat="@drawable/album_icon"
+        app:layout_constraintBottom_toTopOf="@+id/songText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songPerformer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
