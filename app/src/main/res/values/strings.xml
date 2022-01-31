@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">EmptyProjectStolbov</string>
+    <string name="app_name">Storage app</string>
+    <string name="input_some_text">Input some text</string>
+    <string name="save_shared">Save shared</string>
+    <string name="save_internal">Save Internal</string>
+    <string name="save_external">Save External</string>
+    <string name="save_db">Save DB</string>
+    <string name="load_db">Load DB</string>
+    <string name="load_shared">Load shared</string>
+    <string name="load_internal">Load Internal</string>
+    <string name="load_external">Load External</string>
 </resources>
